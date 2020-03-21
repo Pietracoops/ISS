@@ -22,6 +22,8 @@
   <!-- Custom styles -->
   <link href="css/style.css" rel="stylesheet">
   <link href="css/style-responsive.css" rel="stylesheet" />
+  <!-- Toastify -->
+  <link href="css/toastify.min.css" rel="stylesheet" />
 
 
   <!-- =======================================================
@@ -58,7 +60,7 @@
       <div id="sidebar" class="nav-collapse ">
         <!-- sidebar menu start-->
         <ul class="sidebar-menu">
-          <li class="active">
+          <li class="sub-menu">
             <a class="" href="index.html">
                           <i class="icon_house_alt"></i>
                           <span>Dashboard</span>
@@ -218,9 +220,9 @@
                   </thead>
                   <tbody>
 				    <tr>
-                         <td><div style="text-align: center"><a class="btn btn-primary" href="" title="DC EPU">Start DC EPU</a></div></td>
-					     <td><div style="text-align: center"><a class="btn btn-primary" href="" title="AC EPU">Start AC EPU</a></div></td>
-						 <td><div style="text-align: center"><a class="btn btn-primary" href="" title="AC GPU">Start AC GPU</a></div></td>
+                         <td><div style="text-align: center"><a class="btn btn-primary" id="Start_DC_EPU" href="" title="DC EPU">Start DC EPU</a></div></td>
+					     <td><div style="text-align: center"><a class="btn btn-primary" id="Start_AC_EPU" href="" title="AC EPU">Start AC EPU</a></div></td>
+						 <td><div style="text-align: center"><a class="btn btn-primary" id="Start_AC_GPU" href="" title="AC GPU">Start AC GPU</a></div></td>
                     </tr>
                   </tbody>
                 </table>
@@ -231,6 +233,10 @@
             </section>
           </div>
 		  <!-- Gyros End-->
+		<div class="popup" onclick="myFunction()">Click me!
+			<span class="popuptext" id="myPopup">Popup text...</span>
+		</div>
+		
 		
 		</div>
         </div>
@@ -253,7 +259,8 @@
     </div>
   </section>
   <!-- container section end -->
-
+  
+  
   <!-- javascripts -->
   <script src="js/jquery.js"></script>
   <script src="js/bootstrap.min.js"></script>
@@ -265,6 +272,12 @@
   <script src="js/scripts.js"></script>
   <script src="js/jquery.slimscroll.min.js"></script>
 
+  <script src="js/restcalls.js"></script>
+  <!-- Angular -->
+  <script src="js/angular.min.js"></script>
+  <!-- Toastify -->
+  <script type="text/javascript" src="js/toastify.js"></script>
+  <script type="text/javascript" src="js/custom-toast.js"></script>
 
 </body>
 
