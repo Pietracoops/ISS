@@ -4,6 +4,33 @@
 //  ],
 //  i = 0;
 //
+
+//green: rgb(87, 180, 91)
+//blue : rgb(47, 156, 244)
+//red  : rgb(245, 79, 67)
+
+
+// When the user clicks on <div>, open the popup
+//function myFunction() {
+//  var popup = document.getElementById("myPopup");
+//  popup.classList.toggle("show");
+//  var button = document.getElementById("Start_DC_EPU");
+//  var test = setTimeout(alertFunc, 1000)  
+//}
+// document.getElementById("myPopup").textContent="Called from button";
+// var popup = document.getElementById("myPopup");
+// popup.classList.toggle("show");
+//alert("Hello!");
+
+
+
+
+//sample toast
+//Toastify({text: "DC EPU Clicked", duration: 2500, destination: "https://github.com/apvarun/toastify-js", newWindow: true, close: true,
+//  gravity: "top",
+//  position: 'right',
+//  backgroundColor: "rgb(201, 76, 76)"
+//}).showToast();
 //Toastify({
 //  text: "Hi",
 //  duration: 4500,

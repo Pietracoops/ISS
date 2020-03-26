@@ -7,7 +7,6 @@
   <meta name="description" content="NH90 Demo ISS">
   <meta name="author" content="Massimo">
   <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
-  <link rel="shortcut icon" href="img/favicon.png">
 
   <title>NH90 Instructor Operating System</title> <!-- Browser Title -->
 
@@ -131,8 +130,8 @@
                   </thead>
                   <tbody>
 				    <tr>
-                         <td><div style="text-align: center"><a class="btn btn-primary" href="" title="Engine 1"> Start Engine 1</a></div></td>
-					     <td><div style="text-align: center"><a class="btn btn-primary" href="" title="Engine 2"> Start Engine 2</a></div></td>
+                         <td><div style="text-align: center"><a class="btn btn-primary" id="Engine_1" href="" title="Engine 1"> Start Engine 1</a></div></td>
+					     <td><div style="text-align: center"><a class="btn btn-primary" id="Engine_2" href="" title="Engine 2"> Start Engine 2</a></div></td>
                     </tr>
                   </tbody>
                 </table>
@@ -160,13 +159,13 @@
                   </thead>
                   <tbody>
 				    <tr>
-                         <td><div style="text-align: center"><a class="btn btn-primary" href="" title="Gyro 1"> Align Gyro 1</a></div></td>
-					     <td><div style="text-align: center"><a class="btn btn-primary" href="" title="Gyro 2"> Align Gyro 2</a></div></td>
+                         <td><div style="text-align: center"><a class="btn btn-primary" id="Align_Gyro_1" href="" title="Gyro 1"> Align Gyro 1</a></div></td>
+					     <td><div style="text-align: center"><a class="btn btn-primary" id="Align_Gyro_2" href="" title="Gyro 2"> Align Gyro 2</a></div></td>
                     </tr>
                   </tbody>
                 </table>
 					<div style="text-align: center">
-                       <a class="btn btn-success" href="" title="Both Gyros"> Quick Align Both Gyros</a>
+                       <a class="btn btn-success" id="Align_Both_Gyro" href="" title="Both Gyros"> Quick Align Both Gyros</a>
                     </div>
               </div>
             </section>
@@ -181,7 +180,7 @@
               </header>
               <div class="panel-body">
 					<div style="text-align: center">
-                       <a class="btn btn-success" href="" title="Both Gyros"> Quick Start APU</a>
+                       <a class="btn btn-success" id="Quick_Start_APU" href="" title="APU"> Quick Start APU</a>
                     </div>
               </div>
             </section>
@@ -233,10 +232,6 @@
             </section>
           </div>
 		  <!-- Gyros End-->
-		<div class="popup" onclick="myFunction()">Click me!
-			<span class="popuptext" id="myPopup">Popup text...</span>
-		</div>
-		
 		
 		</div>
         </div>
