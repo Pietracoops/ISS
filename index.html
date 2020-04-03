@@ -21,8 +21,10 @@
   <!-- Custom styles -->
   <link href="css/style.css" rel="stylesheet"> <!-- Background colors -->
   <link href="css/style-responsive.css" rel="stylesheet" />
-  
-  
+  <!-- Toastify -->
+  <link href="css/toastify.min.css" rel="stylesheet" />
+
+
   <!-- =======================================================
     Project Name: Instructor Operating Station for the NH90 Program
     Author: Massimo Pietracupa
@@ -59,16 +61,34 @@
       <div id="sidebar" class="nav-collapse ">
         <!-- sidebar menu start-->
         <ul class="sidebar-menu">
-          <li class="sub-menu">
-            <a class="" href="index.html">
+          <li class="sub-menu" id="SideBar_Home_Page">
+            <a class="" href="javascript:;">
                           <i class="icon_house_alt"></i>
                           <span>Dashboard</span>
                       </a>
           </li>
-          <li class="sub-menu">
-			<a class="" href="page_reposition.html">
+          <li class="sub-menu" id="SideBar_Reposition_Page">
+			<a class="" href="javascript:;">
 						  <i class="icon_map"></i>
                           <span>Reposition</span>
+                      </a>
+          </li>
+		  <li class="sub-menu" id="SideBar_Reposition_Page">
+			<a class="" href="javascript:;">
+						  <i class="icon_map"></i>
+                          <span>Status</span>
+                      </a>
+          </li>
+		  <li class="sub-menu" id="SideBar_Reposition_Page">
+			<a class="" href="javascript:;">
+						  <i class="icon_map"></i>
+                          <span>MCL</span>
+                      </a>
+          </li>
+		  <li class="sub-menu" id="SideBar_Reposition_Page">
+			<a class="" href="javascript:;">
+						  <i class="icon_map"></i>
+                          <span>Rehost Adapter</span>
                       </a>
           </li>
 		  <li class="sub-menu">
@@ -78,9 +98,9 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-			  <li><a class="" href="page_quick_setup.html"><i class="fa fa-wrench"></i>Quick Start</a></li>
-              <li><a class="" href="page_freeze.html"><i class="fa fa-pause"></i>Freezes</a></li>
-              <li><a class="" href="page_reset.html"><i class="fa fa-tasks"></i>Resets</a></li>
+			  <li><a class="sub-menu" id="SideBar_Quick_Start_Page" href="javascript:;"><i class="fa fa-wrench"></i>Quick Start</a></li>
+              <li><a class="sub-menu" id="SideBar_Freeze_Page" href="javascript:;"><i class="fa fa-pause"></i>Freezes</a></li>
+              <li><a class="sub-menu" id="SideBar_Resets_Page" href="javascript:;"><i class="fa fa-tasks"></i>Resets</a></li>
             </ul>
           </li>
         </ul>
@@ -89,6 +109,10 @@
     </aside>
     <!--sidebar end-->
 
+
+<!--=============================HOME PAGE START==============================-->	
+
+<div id="Home_Page">
     <!--main content start-->
     <section id="main-content">
       <section class="wrapper">
@@ -244,13 +268,460 @@
             <!--Project Activity end-->
           </div>
         </div><br><br>
-
-
-
       </section>
+	 </div>
+<!--=============================HOME PAGE END==============================-->	 
+	 
+	 
+
+<!--=============================REPOSITION PAGE START======================-->
+	 
+			<div id="Reposition_Page">
+					<!--main content start-->
+				<section id="main-content">
+				<section class="wrapper">
+					<div class="row">
+					<div class="col-lg-12">
+						<h3 class="page-header"><i class="icon_map"></i></i>Reposition</h3>
+						<ol class="breadcrumb">
+						<li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+						<li><i class="icon_map"></i></i>Reposition</li>
+						</ol>
+					</div>
+					</div>
+					
+					
+					
+				<!-- Form validations -->
+					<div class="row">
+					<div class="col-md-3">
+						<section class="panel">
+						<header class="panel-heading">
+							Parameters
+						</header>
+						<div class="panel-body">
+							<div class="form">
+							<form class="form-validate form-horizontal" id="feedback_form" method="get" action="">
+								<div class="form-group ">
+								<label for="cname" class="control-label col-lg-5">Longitude</label>
+								<div class="col-xs-5">
+									<input class="form-control" id="cname" name="fullname" minlength="5" type="text" required />
+								</div>
+								</div>
+								<div class="form-group ">
+								<label for="cname" class="control-label col-lg-5">Latitude</label>
+								<div class="col-xs-5">
+									<input class="form-control" id="cname" name="fullname" minlength="5" type="text" required />
+								</div>
+								</div>
+								
+								<div class="form-group ">
+								<label for="cemail" class="control-label col-lg-5">MGRS</label>
+								<div class="col-xs-5">
+									<input class="form-control " id="cemail" type="email" name="email" required />
+								</div>
+								</div>
+								<div class="form-group ">
+								<label for="curl" class="control-label col-lg-5">Heading</label>
+								<div class="col-xs-5">
+									<input class="form-control " id="curl" type="url" name="url" />
+								</div>
+								</div>
+								<div class="form-group ">
+								<label for="cname" class="control-label col-lg-5">Speed</label>
+								<div class="col-xs-5">
+									<input class="form-control" id="subject" name="subject" minlength="5" type="text" required />
+								</div>
+								</div>
+								<div class="form-group ">
+								<label for="cname" class="control-label col-lg-5">Altitude</label>
+								<div class="col-xs-5">
+									<input class="form-control" id="subject" name="subject" minlength="5" type="text" required />
+								</div>
+								</div>
+								<div class="form-group">
+								<div style="text-align: center">
+								<button class="btn btn-primary" type="submit">Reposition</button>
+								</div>
+								
+								</div>
+							</form>
+							</div>
+						</div>
+						</section>
+						
+					</div>
+					
+					
+						<div class="col-lg-8">
+						<!--Project Activity start-->
+						<section class="panel">
+						<div class="panel-body progress-panel">
+							<div class="row">
+							<div class="col-lg-8 task-progress pull-left">
+								<h1><i class="fa fa-fighter-jet">Preset Locations</i></h1>
+							</div>
+							</div>
+						</div>
+						<table class="table table-hover personal-task">
+							<tbody>
+							<tr>
+								<td>DOH</td>
+								<td>
+								Doha - Qatar
+								</td>
+								<td>
+								<span class="badge bg-success">Available</span>
+								</td>
+								<td>
+								</td>
+							</tr>
+							<tr>
+								<td>XOZ</td>
+								<td>
+								Doha Free Zone - Qatar
+								</td>
+								<td>
+								<span class="badge bg-success">Available</span>
+								</td>
+								<td>
+								<div id="work-progress2"></div>
+								</td>
+							</tr>
+							<tr>
+								<td>XJD</td>
+								<td>
+								Al Udeid AB - Qatar
+								</td>
+								<td>
+								<span class="badge bg-success">Available</span>
+								</td>
+								<td>
+								<div id="work-progress3"></div>
+								</td>
+							</tr>
+							</tbody>
+						</table>
+						</section>
+						<!--Project Activity end-->
+					</div>
+					
+					</div>
+					
+
+					
+				</section>
+				</section>
+				<!--main content end-->
+			</div>
+	 
+<!--=============================REPOSITION PAGE END======================-->	 
+	 
+	 
+	 
+<!--=============================QUICK START PAGE START======================-->	
+	 <div id="Quick_Start_Page">
+		    <!--main content start-->
+			<section id="main-content">
+			<section class="wrapper">
+				<div class="row">
+				<div class="col-lg-12">
+					<h3 class="page-header"><i class="fa fa-wrench"></i> Quick Setup</h3>
+					<ol class="breadcrumb">
+					<li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+					<li><i class="icon_toolbox"></i></i>Setup</li>
+					<li><i class="fa fa-wrench"></i>Quick Setup</li>
+					</ol>
+				</div>
+				</div>
+				
+				<div class="row"><!-- Row Start -->
+				<div class="col-lg-12">
+				<div class="row">
+				
+				<!-- Engines Start -->
+				<div class="col-md-3">
+					<section class="panel">
+					<header class="panel-heading">
+						<h3>Engines</h3>
+					</header>
+					<div class="panel-body">
+						<table class="table table-bordered table-striped">
+						<thead>
+							<tr>
+							<th><div style="text-align: center">Engine 1</div></th>
+							<th><div style="text-align: center">Engine 2</div></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><div style="text-align: center"><a class="btn btn-primary" id="Engine_1" href="" title="Engine 1"> Start Engine 1</a></div></td>
+								<td><div style="text-align: center"><a class="btn btn-primary" id="Engine_2" href="" title="Engine 2"> Start Engine 2</a></div></td>
+							</tr>
+						</tbody>
+						</table>
+							<div style="text-align: center">
+							<a class="btn btn-success" href="" title="Both Engines"> Both Engines</a>
+							</div>
+					</div>
+					</section>
+				</div>
+				<!-- Engines End-->
+				
+				<!-- Gyros Start -->
+				<div class="col-md-3">
+					<section class="panel">
+					<header class="panel-heading">
+						<h3>Gyros</h3>
+					</header>
+					<div class="panel-body">
+						<table class="table table-bordered table-striped">
+						<thead>
+							<tr>
+							<th><div style="text-align: center">Gyro 1</div></th>
+							<th><div style="text-align: center">Gyro 2</div></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><div style="text-align: center"><a class="btn btn-primary" id="Align_Gyro_1" href="" title="Gyro 1"> Align Gyro 1</a></div></td>
+								<td><div style="text-align: center"><a class="btn btn-primary" id="Align_Gyro_2" href="" title="Gyro 2"> Align Gyro 2</a></div></td>
+							</tr>
+						</tbody>
+						</table>
+							<div style="text-align: center">
+							<a class="btn btn-success" id="Align_Both_Gyro" href="" title="Both Gyros"> Quick Align Both Gyros</a>
+							</div>
+					</div>
+					</section>
+				</div>
+				<!-- Gyros End-->
+				
+				<!-- APU Start -->
+				<div class="col-md-3">
+					<section class="panel">
+					<header class="panel-heading">
+						<h3><div style="text-align: center">APU</div></h3>
+					</header>
+					<div class="panel-body">
+							<div style="text-align: center">
+							<a class="btn btn-success" id="Quick_Start_APU" href="" title="APU"> Quick Start APU</a>
+							</div>
+					</div>
+					</section>
+				</div>
+				<!-- APU End-->
+				
+				</div>
+				</div>
+				</div><!-- Row End -->
+		
+				<div class="row"><!-- Row Start -->
+				<div class="col-lg-12">
+				<div class="row">
+				
+				<!-- External Start -->
+				<div class="col-md-5">
+					<section class="panel">
+					<header class="panel-heading">
+						<h3>External Power</h3>
+					</header>
+					<div class="panel-body">
+						<table class="table table-bordered table-striped">
+						<thead>
+							<tr>
+							<th><div style="text-align: center">DC EPU</div></th>
+							<th><div style="text-align: center">AC EPU</div></th>
+							<th><div style="text-align: center">AC GPU</div></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><div style="text-align: center"><a class="btn btn-primary" id="Start_DC_EPU" href="" title="DC EPU">Start DC EPU</a></div></td>
+								<td><div style="text-align: center"><a class="btn btn-primary" id="Start_AC_EPU" href="" title="AC EPU">Start AC EPU</a></div></td>
+								<td><div style="text-align: center"><a class="btn btn-primary" id="Start_AC_GPU" href="" title="AC GPU">Start AC GPU</a></div></td>
+							</tr>
+						</tbody>
+						</table>
+							<div style="text-align: center">
+							<a class="btn btn-success" href="" title="Both Gyros"> Quick Start All Systems</a>
+							</div>
+					</div>
+					</section>
+				</div>
+				<!-- Gyros End-->
+				
+				</div>
+				</div>
+				</div><!-- Row End -->
+				
+				
+				<div class="row">
+				<div class="col-lg-12">
+		
+				</div>
+				</div>
+				<!-- page end-->
+			</section>
+			</section>
+			<!--main content end-->
+	 
+	 </div>
+
+<!--=============================QUICK START PAGE END======================-->	 
+
+<!--=============================FREEZE PAGE START=========================-->	
+	 
+	 <div id="Freeze_Page">
+			<!--main content start-->
+			<section id="main-content">
+			<section class="wrapper">
+				<div class="row">
+				<div class="col-lg-12">
+					<h3 class="page-header"><i class="fa fa-pause"></i> Freezes</h3>
+					<ol class="breadcrumb">
+					<li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+					<li><i class="icon_toolbox"></i></i>Setup</li>
+					<li><i class="fa fa-pause"></i>Freezes</li>
+					</ol>
+				</div>
+				</div>
+				<!-- Form validations -->
+				<div class="row">
+				<div class="col-lg-12">
+		
+				<div class="row">
+				<div class="col-md-4">
+					<section class="panel">
+					<header class="panel-heading">
+						<h3>Freezes</h3>
+		
+					</header>
+					<div class="panel-body">
+						<table class="table table-bordered table-striped">
+						<tbody>
+							<tr>
+							<td><div style="text-align: center"><a class="btn btn-danger" href="" title="Total Freeze"><span class="icon_target"></span> Total Freeze</a></div></td>
+							<td><div style="text-align: center"><a class="btn btn-success" href="" title="Freeze Flight"><span class="fa fa-paper-plane"></span> Flight</a></div></td>
+							</tr>
+							<tr>
+							<td><div style="text-align: center"><a class="btn btn-primary" href="" title="Freeze Altitude"><span class="fa fa-cloud"></span> Altitude</a></div></td>
+							<td><div style="text-align: center"><a class="btn btn-primary" href="" title="Freeze Position"><span class="fa fa-globe"></span> Position</a></div></td>
+							</tr>
+							<tr>
+							<td><div style="text-align: center"><a class="btn btn-primary" href="" title="Freeze Motion"><span class="fa fa-fighter-jet"></span> Motion</a></div></td>
+							<td><div style="text-align: center"><a class="btn btn-primary" href="" title="Freeze Fuel"><i class="icon_genius"></i></span> Fuel</a></div></td>
+							</tr>
+						</tbody>
+						</table>
+					</div>
+					</section>
+				</div>
+				</div>
+				<!-- page start-->
+		
+				</div>
+				</div>
+				
+				<div class="row">
+				<div class="col-lg-12">
+		
+				</div>
+				</div>
+				<!-- page end-->
+			</section>
+			</section>
+			<!--main content end-->
+	 </div>
+<!--=============================FREEZE PAGE END===========================-->
+
+<!--=============================RESETS PAGE START======================-->	
+
+	<div id="Resets_Page">
+
+   <!--main content start-->
+    <section id="main-content">
+      <section class="wrapper">
+        <div class="row">
+          <div class="col-lg-12">
+            <h3 class="page-header"><i class="fa fa-tasks"></i> Resets</h3>
+            <ol class="breadcrumb">
+              <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+              <li><i class="icon_toolbox"></i></i>Setup</li>
+              <li><i class="fa fa-tasks"></i>Resets</li>
+            </ol>
+          </div>
+        </div>
+        <!-- Form validations -->
+        <div class="row">
+          <div class="col-lg-12">
+
+        <div class="row">
+          <div class="col-md-7">
+            <section class="panel">
+              <header class="panel-heading">
+                <h3>Resets</h3>
+
+              </header>
+              <div class="panel-body">
+                <table class="table table-bordered table-striped">
+                  <tbody>
+				    <tr>
+                      <td><div style="text-align: center"><a class="btn btn-success" href="" title="Total Freeze"> Total Reset</a></div></td>
+					  <td><div style="text-align: center"><a class="btn btn-success" href="" title="Total Freeze"> Consumables</a></div></td>
+                    </tr>
+				    <tr>
+                      <td><div style="text-align: center"><a class="btn btn-primary" href="" title="Refill Fuel"></span>Refill Refuel</a></div></td>
+					  <td><div style="text-align: center"><a class="btn btn-primary" href="" title="Refill Oil System"></span>Refill Oil System</a></div></td>
+					  <td><div style="text-align: center"><a class="btn btn-primary" href="" title="Reset Temperature">Reset All Temperature</a></div></td>
+                    </tr>
+                    <tr>
+                      <td><div style="text-align: center"><a class="btn btn-primary" href="" title="Reset Expendables">Reset Expendables</a></div></td>
+					  <td><div style="text-align: center"><a class="btn btn-primary" href="" title="Reset Battery">Reset Battery</a></div></td>
+					  <td><div style="text-align: center"><a class="btn btn-primary" href="" title="Reset Icing">Reset Icing</a></div></td>
+					  <td><div style="text-align: center"><a class="btn btn-primary" href="" title="Reset Flotation Gear">Reset Flotation Gear</a></div></td>
+                    </tr>
+                    <tr>
+                      <td><div style="text-align: center"><a class="btn btn-primary" href="" title="Reset CMC">Reset CMC</a></div></td>
+					  <td><div style="text-align: center"><a class="btn btn-primary" href="" title="Reset MTC">Reset MTC</a></div></td>
+					  <td><div style="text-align: center"><a class="btn btn-primary" href="" title="Reset Damage">Reset Damage</a></div></td>
+                    </tr>
+                    <tr>
+                      <td><div style="text-align: center"><a class="btn btn-primary" href="" title="Reset PFCS">Reset PFCS</a></div></td>
+					  <td><div style="text-align: center"><a class="btn btn-primary" href="" title="Steady CB Trip">Steady CB Trip</a></div></td>
+					  <td><div style="text-align: center"><a class="btn btn-primary" href="" title="Reset Weather">Weather</a></div></td>
+                    </tr>
+					<tr>
+                      <td><div style="text-align: center"><a class="btn btn-danger" href="" title="Master Reset">Master Reset</a></div></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          </div>
+        </div>
+        <!-- page start-->
+
+          </div>
+        </div>
+		
+        <div class="row">
+          <div class="col-lg-12">
+   
+          </div>
+        </div>
+        <!-- page end-->
+      </section>
+    </section>
+    <!--main content end-->
+
+	</div>
+<!--=============================RESETS PAGE END===========================-->
+
+
       <div class="text-right">
         <div class="credits">
-          NH90 IS Team
+          
         </div>
       </div>
     </section>
@@ -271,7 +742,13 @@
   <!--custome script for all page-->
   <script src="js/scripts.js"></script>
   <script src="js/jquery.slimscroll.min.js"></script>
-
+  <script src="js/sidebar.js"></script>
+  <script src="js/restcalls.js"></script>
+  <!-- Angular -->
+  <script src="js/angular.min.js"></script>
+  <!-- Toastify -->
+  <script type="text/javascript" src="js/toastify.js"></script>
+  <script type="text/javascript" src="js/custom-toast.js"></script>
 </body>
 
 </html>
