@@ -36,35 +36,37 @@ object : [
 // ~~~~~~~~~~~~ QUICK STARTS ~~~~~~~~~~~~~~~~
 var QS_E_START_ENGINE1 = "J04_SIMENG1QUICKSTARTMODE"
 var QS_E_START_ENGINE2 = "J04_SIMENG2QUICKSTARTMODE"
-var QS_E_START_BOTH_ENGINES = "H71_ENGQSTRT_L1" 
+var QS_E_START_BOTH_ENGINES = "H71_ENGQSTRT_L1" // quick start -- H99_ACSET_ENGQKST_L1 : quick shutdown -- H99_ACSET_ENGQKSHTDN_L1
 //might be this TCMFSTRT or this TCM0FSTR
 //H71_ENGQSTRT_L1 - All Engine quickstart backdrive
 //
 var QS_G_START_GYRO1 = "L99_XZ_SIMREADY_L1"
 var QS_G_START_GYRO2 = "L99_XZ_SIMREADY_L1"
 var QS_G_START_BOTH_GYROS = "J04_SIMIRSQUICKALIGN"
-var QS_A_START_APU = "H99_ACSET_APUQKST_L1"
+var QS_A_START_APU = "H99_ACSET_APUQKST_L1"			//Done
 //I99_PANEL_APUQUICKSTART_L1 - APU QUICK START PANEL INPUT
 var QS_EP_START_DC_EPU = "H04_REPOS_HDG_CMD_F8"
 var QS_EP_START_AC_EPU = "G24_PMC_ACEPU_CTRL_ON_L1"
 var QS_EP_START_AC_GPU = "L99_XZ_SIMREADY_L1"
 
 // ~~~~~~~~~~~~ REHOST ADAPTER ~~~~~~~~~~~~~~
-var Reload_Mapping = "DEX_RESET_LABELMAPPER_I4" //Unload Mapper
+var Reload_Mapping = "DEX_RESET_LABELMAPPER_I4"		//Done
 
 // ~~~~~~~~~~~~~~  FREEZES ~~~~~~~~~~~~~~~~~~
 var F_FREEZE_TOTAL = "L99_XZ_SIMREADY_L1"
 var F_FREEZE_FLIGHT = "L99_XZ_SIMREADY_L1"
+//H04_FRZ_FLT_L1:Flight freeze active flag  
+//H04_FRZ_POS_L1:Position freeze active flag
 var F_FREEZE_ALTITUDE = "L99_XZ_SIMREADY_L1"
 var F_FREEZE_POSITION = "L99_XZ_SIMREADY_L1"
 var F_FREEZE_MOTION = "L99_XZ_SIMREADY_L1"
 var F_FREEZE_FUEL = "L99_XZ_SIMREADY_L1"
 
 // ~~~~~~~~~~~~~~  RESETS ~~~~~~~~~~~~~~~~~~~
-var R_RESET_TOTAL = "L99_XZ_SIMREADY_L1"
+var R_RESET_TOTAL = "H99_XZ_TCRTOT_L1"				//Done
 var R_RESET_CONSUMABLES = "L99_XZ_SIMREADY_L1"
 var R_RESET_REFUEL = "L99_XZ_SIMREADY_L1"
-var R_RESET_OIL_SYSTEM = "L99_XZ_SIMREADY_L1"
+var R_RESET_OIL_SYSTEM = "H99_RESET_ENGOILQTY_L1"	//Done -- might need H99_RESET_ENGOILTEMP_L1 too
 var R_RESET_TEMPERATURE = "L99_XZ_SIMREADY_L1"
 var R_RESET_EXPENDABLES = "L99_XZ_SIMREADY_L1"
 var R_RESET_BATTERY = "L99_XZ_SIMREADY_L1"
@@ -88,17 +90,124 @@ function alertFunc() {
 }
 
 //*******************************************************************
+//						DASHBOARD
+//*******************************************************************
+
+$('#Lab_Wiki_Button').on('click', function(event) {
+  event.preventDefault(); // To prevent following the link (optional)
+  buttonPressed = "Lab_Wiki_Button"
+  Toastify({text: "Feature Not Available Yet", duration: 3500, close: true, gravity: "top", position: 'right', backgroundColor: "rgb(255, 191, 0)"}).showToast();
+});
+
+$('#Sim_Man_Button').on('click', function(event) {
+  event.preventDefault(); // To prevent following the link (optional)
+  buttonPressed = "Sim_Man_Button"
+  Toastify({text: "Feature Not Available Yet", duration: 3500, close: true, gravity: "top", position: 'right', backgroundColor: "rgb(255, 191, 0)"}).showToast();
+});
+
+$('#Issues_Button').on('click', function(event) {
+  event.preventDefault(); // To prevent following the link (optional)
+  buttonPressed = "Issues_Button"
+  Toastify({text: "Feature Not Available Yet", duration: 3500, close: true, gravity: "top", position: 'right', backgroundColor: "rgb(255, 191, 0)"}).showToast();
+});
+
+//*******************************************************************
 //						REPOSITION PAGE
 //*******************************************************************
 
+$('#repo_table_1').on('click', function(event) {
+  event.preventDefault(); // To prevent following the link (optional)
+  buttonPressed = "repo_table_1"
 
+  //document.getElementById("Reposition_Longitude_TB").placeholder = "Massimo"
+  document.getElementById("Reposition_Longitude_TB").value = "25.2647N"
+  document.getElementById("Reposition_Latitude_TB").value = "51.5596E"
+  document.getElementById("Reposition_MGRS_TB").value = "Sample MGRS"
+  document.getElementById("Reposition_Heading_TB").value = "Sample Heading"
+  document.getElementById("Reposition_Speed_TB").value = "0"
+  document.getElementById("Reposition_Altitude_TB").value = "0"
+  
+});
+
+$('#repo_table_2').on('click', function(event) {
+  event.preventDefault(); // To prevent following the link (optional)
+  buttonPressed = "repo_table_2"
+
+  //document.getElementById("Reposition_Longitude_TB").placeholder = "Massimo"
+  document.getElementById("Reposition_Longitude_TB").value = "25.114398N"
+  document.getElementById("Reposition_Latitude_TB").value = "51.596707E"
+  document.getElementById("Reposition_MGRS_TB").value = "Sample MGRS"
+  document.getElementById("Reposition_Heading_TB").value = "Sample Heading"
+  document.getElementById("Reposition_Speed_TB").value = "0"
+  document.getElementById("Reposition_Altitude_TB").value = "0"
+});
+
+$('#repo_table_3').on('click', function(event) {
+  event.preventDefault(); // To prevent following the link (optional)
+  buttonPressed = "repo_table_3"
+
+  //document.getElementById("Reposition_Longitude_TB").placeholder = "Massimo"
+  document.getElementById("Reposition_Longitude_TB").value = "25.1170N"
+  document.getElementById("Reposition_Latitude_TB").value = "51.3088E"
+  document.getElementById("Reposition_MGRS_TB").value = "Sample MGRS"
+  document.getElementById("Reposition_Heading_TB").value = "Sample Heading"
+  document.getElementById("Reposition_Speed_TB").value = "0"
+  document.getElementById("Reposition_Altitude_TB").value = "0"
+});
+
+
+$('#Reposition_Button_TB').on('click', function(event) {
+  event.preventDefault(); // To prevent following the link (optional)
+  var placeholdertext = document.getElementById("Reposition_Longitude_TB").placeholder
+  
+  
+  //Latitude: S 37 : 00 : 24.22
+  //Longitude:E 174 : 48 : 19.49
+  //MGRS 60HUE 04738 02130
+  //heading 251 degrees
+  //speed 0.0kts
+  //altitude 0.0 ft
+  
+  //Reposition Labels
+  H04_REPOS_RQ_L1 : Reposition request - Request flag
+  VREP_ALT_MODE   : Absolute Reposition Altitude Mode
+  VREP_ALT_VAL    : Absolute Reposition Altitude value
+  VREP_SPD_MODE   : Absolute Reposition Speed Mode 
+  VREP_SPD_VAL    : Absolute Reposition Speed Value
+  VREP_ROC_MODE   : Absolute reposition ROC Mode
+  VREP_ROC_VAL    : Absolute reposition ROC value
+  VREP_HDG_MODE   : Absolute reposition Heading Mode  
+  VREP_HDG_VAL    : Absolute reposition Heading value 
+  VREP_POS_MODE   : Absolute reposition Position Mode  
+  VREP_POS_LAT    : Absolute reposition latitude value 
+  VREP_POS_LON    : Absolute reposition longitude value
+  VREP_GEAR_MODE  : Absolute reposition Gear Mode 
+  VREP_GEAR_VAL   : Absolute reposition Gear value
+  VREPCRASH_RQ    : Absolute Reposition Requested by Crash/in Progress
+  VREP_TYPE       : Absolute Reposition type (1=OnGnd,2=InAir,3=OnDeck)
+
+  
+  
+  //check if a textbox is empty
+  var textboxstring = document.getElementById("Reposition_Longitude_TB").value
+  if(textboxstring == "")
+  {
+	  //Toastify({text: "EMPTY", duration: 3500, close: true, gravity: "top", position: 'right', backgroundColor: "rgb(87, 180, 91)"}).showToast();
+  }
+  
+  //Toastify({text: placeholdertext, duration: 3500, close: true, gravity: "top", position: 'right', backgroundColor: "rgb(87, 180, 91)"}).showToast(); // get placeholder text
+  buttonPressed = "Reposition"
+  path = QS_E_START_ENGINE1
+  value = {Value: 30.0, Index: ""}
+  RestCall(1,path,value);
+});
 
 //*******************************************************************
 //						QUICK SETUP PAGE
 //*******************************************************************
 
 
-//ENGINES
+
 $('#Engine_1').on('click', function(event) {
   event.preventDefault(); // To prevent following the link (optional)
   buttonPressed = "Start Engine 1"
@@ -115,7 +224,7 @@ $('#Engine_2').on('click', function(event) {
 });
 
 
-//GYROS
+
 $('#Align_Gyro_1').on('click', function(event) {
   event.preventDefault(); // To prevent following the link (optional)
   buttonPressed = "Align Gyro 1"
@@ -130,7 +239,7 @@ $('#Align_Gyro_2').on('click', function(event) {
 });
 
 
-//APU
+
 $('#Quick_Start_APU').on('click', function(event) {
   event.preventDefault(); // To prevent following the link (optional)
   buttonPressed = "Quick Start APU"
@@ -140,7 +249,7 @@ $('#Quick_Start_APU').on('click', function(event) {
 });
 
 
-//EXTERNAL POWER
+
 $('#Start_DC_EPU').on('click', function(event) {
   event.preventDefault(); // To prevent following the link (optional)
   buttonPressed = "Start DC EPU"
@@ -395,7 +504,7 @@ function printRequestStatus() {
 
 if (this.readyState == 1) {
 	
-	Toastify({text: "Request Sent... Please Wait. Ready state: " + this.readyState, duration: 3500, close: true, gravity: "top", position: 'right', backgroundColor: "rgb(87, 180, 91)"}).showToast();
+	Toastify({text: "Request Sent... Please Wait. Ready state: " + this.readyState, duration: 3500, close: true, gravity: "top", position: 'right', backgroundColor: "rgb(255, 191, 0)"}).showToast();
 	
 } else if (this.readyState == 4) {
 	if (this.status == 200) {

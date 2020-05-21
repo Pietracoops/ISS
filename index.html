@@ -134,7 +134,7 @@
         </div>
 
         <div class="row">
-          <div class="col-lg-3 col-md-3 col-sm-12 col-md-12">
+          <div class="col-lg-3 col-md-3 col-sm-12 col-md-12" id="Lab_Wiki_Button">
             <div class="info-box blue-bg">
               <i class="fa fa-book"></i>
               <div class="count">Lab Wiki</div>
@@ -144,17 +144,17 @@
           </div>
           <!--/.col-->
 
-          <div class="col-lg-3 col-md-3 col-xs-12 col-xs-12">
+          <div class="col-lg-3 col-md-3 col-xs-12 col-xs-12" id="Sim_Man_Button">
             <div class="info-box brown-bg">
               <i class="fa fa-bar-chart-o"></i>
-              <div class="count">Sim-Man</div>
+              <div class="count">Sim-Man </div>
               <!--div class="title">Open up sim manager</div-->
             </div>
             <!--/.info-box-->
           </div>
           <!--/.col-->
 
-          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" id="Issues_Button">
             <div class="info-box dark-bg">
               <i class="fa fa-exclamation-circle"></i>
               <div class="count">Issues</div>
@@ -311,43 +311,43 @@
 								<div class="form-group ">
 								<label for="cname" class="control-label col-lg-5">Longitude</label>
 								<div class="col-xs-5">
-									<input class="form-control" id="cname" name="fullname" minlength="5" type="text" required />
+									<input class="form-control" id="Reposition_Longitude_TB" name="fullname" placeholder="25.2647N" minlength="7" type="text" required />
 								</div>
 								</div>
 								<div class="form-group ">
 								<label for="cname" class="control-label col-lg-5">Latitude</label>
 								<div class="col-xs-5">
-									<input class="form-control" id="cname" name="fullname" minlength="5" type="text" required />
+									<input class="form-control" id="Reposition_Latitude_TB" name="fullname" placeholder="51.5596E" minlength="7" type="text" required />
 								</div>
 								</div>
 								
 								<div class="form-group ">
 								<label for="cemail" class="control-label col-lg-5">MGRS</label>
 								<div class="col-xs-5">
-									<input class="form-control " id="cemail" type="email" name="email" required />
+									<input class="form-control " id="Reposition_MGRS_TB" name="fullname" minlength="5" required />
 								</div>
 								</div>
 								<div class="form-group ">
 								<label for="curl" class="control-label col-lg-5">Heading</label>
 								<div class="col-xs-5">
-									<input class="form-control " id="curl" type="url" name="url" />
+									<input class="form-control " id="Reposition_Heading_TB" name="fullname" required />
 								</div>
 								</div>
 								<div class="form-group ">
 								<label for="cname" class="control-label col-lg-5">Speed</label>
 								<div class="col-xs-5">
-									<input class="form-control" id="subject" name="subject" minlength="5" type="text" required />
+									<input class="form-control" id="Reposition_Speed_TB" name="fullname" minlength="5" type="text" required />
 								</div>
 								</div>
 								<div class="form-group ">
 								<label for="cname" class="control-label col-lg-5">Altitude</label>
 								<div class="col-xs-5">
-									<input class="form-control" id="subject" name="subject" minlength="5" type="text" required />
+									<input class="form-control" id="Reposition_Altitude_TB" name="fullname" minlength="5" type="text" required />
 								</div>
 								</div>
 								<div class="form-group">
 								<div style="text-align: center">
-								<button class="btn btn-primary" type="submit">Reposition</button>
+								<button class="btn btn-primary" id="Reposition_Button_TB">Reposition</button>
 								</div>
 								
 								</div>
@@ -371,7 +371,7 @@
 						</div>
 						<table class="table table-hover personal-task">
 							<tbody>
-							<tr>
+							<tr id="repo_table_1">
 								<td>DOH</td>
 								<td>
 								Doha - Qatar
@@ -382,7 +382,7 @@
 								<td>
 								</td>
 							</tr>
-							<tr>
+							<tr id="repo_table_2">
 								<td>XOZ</td>
 								<td>
 								Doha Free Zone - Qatar
@@ -394,7 +394,7 @@
 								<div id="work-progress2"></div>
 								</td>
 							</tr>
-							<tr>
+							<tr id="repo_table_3">
 								<td>XJD</td>
 								<td>
 								Al Udeid AB - Qatar
