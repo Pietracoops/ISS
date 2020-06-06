@@ -169,22 +169,22 @@ $('#Reposition_Button_TB').on('click', function(event) {
   //altitude 0.0 ft
   
   //Reposition Labels
-  H04_REPOS_RQ_L1 : Reposition request - Request flag
-  VREP_ALT_MODE   : Absolute Reposition Altitude Mode
-  VREP_ALT_VAL    : Absolute Reposition Altitude value
-  VREP_SPD_MODE   : Absolute Reposition Speed Mode 
-  VREP_SPD_VAL    : Absolute Reposition Speed Value
-  VREP_ROC_MODE   : Absolute reposition ROC Mode
-  VREP_ROC_VAL    : Absolute reposition ROC value
-  VREP_HDG_MODE   : Absolute reposition Heading Mode  
-  VREP_HDG_VAL    : Absolute reposition Heading value 
-  VREP_POS_MODE   : Absolute reposition Position Mode  
-  VREP_POS_LAT    : Absolute reposition latitude value 
-  VREP_POS_LON    : Absolute reposition longitude value
-  VREP_GEAR_MODE  : Absolute reposition Gear Mode 
-  VREP_GEAR_VAL   : Absolute reposition Gear value
-  VREPCRASH_RQ    : Absolute Reposition Requested by Crash/in Progress
-  VREP_TYPE       : Absolute Reposition type (1=OnGnd,2=InAir,3=OnDeck)
+  //H04_REPOS_RQ_L1 : Reposition request - Request flag
+  //VREP_ALT_MODE   : Absolute Reposition Altitude Mode
+  //VREP_ALT_VAL    : Absolute Reposition Altitude value
+  //VREP_SPD_MODE   : Absolute Reposition Speed Mode 
+  //VREP_SPD_VAL    : Absolute Reposition Speed Value
+  //VREP_ROC_MODE   : Absolute reposition ROC Mode
+  //VREP_ROC_VAL    : Absolute reposition ROC value
+  //VREP_HDG_MODE   : Absolute reposition Heading Mode  
+  //VREP_HDG_VAL    : Absolute reposition Heading value 
+  //VREP_POS_MODE   : Absolute reposition Position Mode  
+  //VREP_POS_LAT    : Absolute reposition latitude value 
+  //VREP_POS_LON    : Absolute reposition longitude value
+  //VREP_GEAR_MODE  : Absolute reposition Gear Mode 
+  //VREP_GEAR_VAL   : Absolute reposition Gear value
+  //VREPCRASH_RQ    : Absolute Reposition Requested by Crash/in Progress
+  //VREP_TYPE       : Absolute Reposition type (1=OnGnd,2=InAir,3=OnDeck)
 
   
   
